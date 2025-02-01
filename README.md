@@ -36,13 +36,13 @@ Download the Lending Club Loan Dataset from the provided source - https://www.ka
 
 #### Models tried:
 
-- Logistic Regression (WIP)
+- Logistic Regression
 
-- Random Forest (WIP)
+- Random Forest
 
 - XGBoost
 
-- Support Vector Machines (SVM) (WIP)
+- LightGBM
 
 ### Evaluating models using accuracy, precision, recall, and F1-score
 
@@ -52,7 +52,7 @@ Hyperparameter tuning using GridSearchCV/RandomizedSearchCV (WIP)
 
 - Generating confusion matrix
 
-- ROC-AUC analysis to compare model performance (WIP)
+- ROC-AUC analysis to compare model performance
 
 - Addressing class imbalance issues (WIP)
 
