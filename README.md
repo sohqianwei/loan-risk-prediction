@@ -10,9 +10,11 @@ The objective of this project is to build a classification model that predicts w
 
 ## Dataset
 
-The Lending Club dataset contains complete loan data for all loans issued through the 2007-2015, including the current loan status (Current, Late, Fully Paid, etc.) and latest payment information. Features (aka variables) include credit scores, number of finance inquiries, address including zip codes and state, and collections among others. Collections indicates whether the customer has missed one or more payments and the team is trying to recover their money. The file is a matrix of about 890 thousand observations and 75 variables.
+This dataset contains the full LendingClub data available from their site. Icluding the current loan status (Current, Late, Fully Paid, etc.) and latest payment information. Features (aka variables) include credit scores, number of finance inquiries, address including zip codes and state, and collections among others. Collections indicates whether the customer has missed one or more payments and the team is trying to recover their money. The file is a matrix of about 890 thousand observations and 75 variables. There are separate files for accepted and rejected loans. 
 
-Download the Lending Club Loan Dataset from the provided source - https://www.kaggle.com/datasets/adarshsng/lending-club-loan-data-csv/data
+Loan - Credit Risk & Population Stability is a part of Lending Club Company public database:
+https://www.kaggle.com/datasets/beatafaron/loan-credit-risk-and-population-stability/data
+
 
 ## Approach
 
@@ -22,15 +24,18 @@ Download the Lending Club Loan Dataset from the provided source - https://www.ka
 
 2. Encoding categorical features
 
-3. Feature scaling (StandardScaler for numerical features)
+3. Managing Date Features
+
+4. Imputing Values for Missing Numerical Features
 
 ### Exploratory Data Analysis (EDA)
 
-1. Distribution of loan status
+1. Correlation analysis between features
 
-2. Correlation analysis between features
+2. Selection based on Correlation with Target Feature
 
-3. Identifying key factors influencing loan defaults
+3. Feature Selection with Recursive Feature Elimination
+
 
 ### Model Selection & Training
 
@@ -40,13 +45,10 @@ Download the Lending Club Loan Dataset from the provided source - https://www.ka
 
 - Random Forest
 
-- XGBoost
+- Gradient Boost
 
-- LightGBM
+- Neural Networks
 
-### Evaluating models using accuracy, precision, recall, and F1-score
-
-Hyperparameter tuning using GridSearchCV/RandomizedSearchCV (WIP)
 
 #### Model Evaluation
 
@@ -54,21 +56,20 @@ Hyperparameter tuning using GridSearchCV/RandomizedSearchCV (WIP)
 
 - ROC-AUC analysis to compare model performance
 
-- Addressing class imbalance issues (WIP)
 
-### Results (WIP)
+### Results 
 
 - The best-performing model achieved an accuracy of XX%, with a precision-recall tradeoff optimized for detecting high-risk applicants.
 
-- Feature importance analysis revealed that credit score, debt-to-income ratio, and loan amount were the top predictors of loan default.
+- Feature importance analysis revealed that recoveries, debt settlement flag, total_rec_prncp were the top predictors of loan default.
 
 ### Technologies Used
 
 - Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn)
 
-- Machine Learning Models (Logistic Regression, Random Forest, XGBoost, etc.)
+- Machine Learning Models (Logistic Regression, Random Forest, Gradient Boost, etc.)
 
-- Data Preprocessing (OneHotEncoder, StandardScaler)
+- Data Preprocessing
 
 - Visualization (Matplotlib, Seaborn)
 
@@ -76,11 +77,11 @@ Hyperparameter tuning using GridSearchCV/RandomizedSearchCV (WIP)
 
 - Clone the repository
 
-- Run Loan Risk Prediction Project.ipynb
+- Run loan_risk_modelling.ipynb
 
 ### Future Improvements
 
-- Implementing deep learning models (Neural Networks)
+- Implementing XGBoost
 
 - Enhancing feature engineering techniques
 
